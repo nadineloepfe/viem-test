@@ -1,12 +1,6 @@
-//-------------------------------------------------------------------------
-// Does NOT work due to eth_sendTransaction. 
-// Hashio JSON-RPC as well as Validation Cloud do not support eth_sendTransaction,
-// it only allows eth_sendRawTransaction
-//-------------------------------------------------------------------------
-
-
 import 'dotenv/config'
 import { createPublicClient, createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
 import { hederaTestnetChain } from './hederaTestnet.js'
 import { myContract } from './contract.js'
 
@@ -20,7 +14,7 @@ const publicClient = createPublicClient({
 const walletClient = createWalletClient({
   chain: hederaTestnetChain,
   transport: http(),
-  account: PRIVATE_KEY,
+  account: privateKeyToAccount(PRIVATE_KEY),
 })
 
 async function main() {
