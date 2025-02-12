@@ -37,7 +37,7 @@ Hedera’s public JSON-RPC endpoint (`testnet.hashio.io`) does **not** support `
 
 To deploy contracts on Hedera Testnetl, use the **Hedera JavaScript SDK** (i.e., `@hashgraph/sdk`) with Hedera’s native “File + Contract” flow
 
-Read-only calls (`eth_call`) and basic queries (like `getBlockNumber`, `getBalance`) work fine on Hedera’s JSON-RPC. However, contract deployment requires a different approach since `eth_sendTransaction` is not implemented on Hashio.
+Read-only calls (`eth_call`) and basic queries (like `getBlockNumber`, `getBalance`) work fine on Hedera’s JSON-RPC. However, contract deployment requires a different approach since `eth_sendTransaction` is not implemented.
 
 ## References
 

@@ -12,13 +12,7 @@ const { chains, publicClient } = configureChains(
 
 const client = createClient({
   autoConnect: true,
-  // For EVM-based wallets:
   connectors: [
-    /* e.g. MetaMaskConnector, etc. 
-       But for Hedera, you need a specialized connector that can handle 
-       raw transaction signing or that transforms eth_sendTransaction 
-       into eth_sendRawTransaction behind the scenes.
-    */
   ],
   publicClient,
 })
